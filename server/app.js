@@ -36,4 +36,4 @@ app.use('/api/com', comRouter);
 app.listen(process.env.PORT, (e) => {
     console.log(e?chalk.red.inverse.bold('Server is not live'):chalk.green.inverse.bold(`Server is live on ${process.env.PORT}`))
     dbConnection();
-})
+}) 
