@@ -23,7 +23,9 @@ const dbConnection = () => {
         console.log(e);
     })
 }
-
+app.get('/', (req,res) => {
+    res.send('Welcome to the server');
+})
 app.use(cookieParser());
 app.use(express.json());
 app.use(cors(corsAllow));
