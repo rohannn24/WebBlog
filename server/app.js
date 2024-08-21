@@ -10,7 +10,7 @@ import comRouter from './router/com.router.js'
 env.config();
 
 const corsAllow = {
-    origin: 'http://localhost:5173',
+    origin: 'https://web-blog-client.vercel.app',
     method: 'POST, GET, PUT, PATCH, HEAD',
     credential: true
 }
@@ -24,7 +24,7 @@ const dbConnection = () => {
     })
 }
 app.get('/', (req,res) => {
-    res.send('Welcome to the server');
+    req.send('Welcome to the server');
 })
 app.use(cookieParser());
 app.use(express.json());
